@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Aldea Prisma | Educación Consciente y Humana</title>
+    <meta name="description" content="Aldea Prisma es un ecosistema educativo para reconectar con el sentido de aprender. Educación más humana, consciente y significativa en Santiago, Chile.">
+    <meta name="keywords" content="educación consciente, educación humana, Aldea Prisma, Santiago Chile, educación alternativa, aprendizaje significativo">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Aldea Prisma | Educación Consciente y Humana">
+    <meta property="og:description" content="Un ecosistema educativo para reconectar con el sentido de aprender. Educación más humana, consciente y significativa.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_CL">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&family=Montserrat:wght@700;800&family=Outfit:wght@400;500;600&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "primary": "#f5a623",
+                "on-primary": "#ffffff",
+                "primary-container": "#f5a623",
+                "on-primary-container": "#291800",
+                "secondary": "#7c6a96",
+                "on-secondary": "#ffffff",
+                "secondary-container": "#e9e3f1",
+                "on-secondary-container": "#230f45",
+                "tertiary": "#7189AF",
+                "on-tertiary": "#ffffff",
+                "tertiary-container": "#d4e3fd",
+                "on-tertiary-container": "#0d1c2f",
+                "brand-green": "#b5be9d",
+                "background": "#faf9f6",
+                "surface": "#faf9f6",
+                "on-surface": "#7189AF",
+                "on-surface-variant": "#7189AF",
+                "outline": "#d7c3ae",
+                "outline-variant": "#e3e2e0",
+                "surface-container-low": "#f4f3f1",
+                "surface-container": "#efeeeb",
+                "surface-container-high": "#e9e8e5",
+                "surface-container-highest": "#e3e2e0",
+                "inverse-surface": "#2f312f",
+                "inverse-on-surface": "#f2f1ee",
+                "error": "#ba1a1a",
+                "on-error": "#ffffff"
+              },
+              "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+              },
+              "spacing": {
+                "container-max": "1200px",
+                "margin-desktop": "64px",
+                "stack-md": "24px",
+                "unit": "8px",
+                "stack-lg": "48px",
+                "margin-mobile": "20px",
+                "gutter": "24px"
+              },
+              "fontFamily": {
+                "heading": ["Caveat", "cursive"],
+                "subtitle": ["League Spartan", "sans-serif"],
+                "body": ["Outfit", "Helvetica", "Arial", "sans-serif"],
+              },
+            },
+          },
+        }
+    </script>
+    
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(250, 249, 246, 0.85);
+            backdrop-filter: blur(12px);
+        }
+        body { color: #7189AF; }
+        h1, h2, h3 { font-family: 'Caveat', cursive; letter-spacing: 0; text-transform: none; color: #7189AF; }
+        h4, h5, .subtitle-font { font-family: 'League Spartan', sans-serif; color: #7189AF; }
+        body, p, a, button, span { font-family: 'Outfit', sans-serif; }
+        .script-font { font-family: 'Caveat', cursive; }
+        .hero-headline {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 500;
+            line-height: 1.15;
+            letter-spacing: -0.01em;
+            color: #7189AF;
+        }
+        .hero-headline .highlight { color: #f5a623; }
+        .text-on-surface-variant { color: #7189AF !important; }
+        .text-on-surface { color: #7189AF !important; }
+        .text-tertiary { color: #7189AF !important; }
+
+        /* Mobile menu */
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        #mobile-menu.open {
+            max-height: 400px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary selection:text-on-primary">
+
+<!-- TopNavBar -->
+<header class="glass-nav sticky top-0 z-50 border-b border-outline-variant/20 shadow-md py-2">
+    <nav class="flex justify-between items-center w-full px-6 md:px-margin-desktop py-4 max-w-container-max mx-auto">
+        <div class="flex items-center gap-3">
+            <img alt="Aldea Prisma Logo" class="w-auto object-contain h-12 md:h-16" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS9QgogS552iYgiCKPjaDG98jpWAoo0OC6-H8sXT4InCSsZMEUiZ8BKMYYrgS1dwuf9TKgOH10Lsc3mBUw5iIhiq9q0NTxmF1HJMiNhfmY8-Zm0wAPLO6iey-vjEhWL8gKpARdbfkbX4bVkJpm4XwllitIgIbcIm2ZQ_4NfJuBSe6zOSF9WGpTZ6TvItRYLMeRo_Ky_afX3U3K9CisxarKl_ov9joPuqPZx-vXfPTo3HdHCD9-1AAcKaFEatHVGr7HXx64Ny8DOH4">
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+            <a class="text-primary border-b-2 border-primary pb-1 font-semibold text-sm subtitle-font uppercase tracking-wider" href="#">Nosotras</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-semibold text-sm subtitle-font uppercase tracking-wider" href="#pilares">Pilares</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-semibold text-sm subtitle-font uppercase tracking-wider" href="#propuesta">Propuesta</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-semibold text-sm subtitle-font uppercase tracking-wider" href="#equipo">Equipo</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-semibold text-sm subtitle-font uppercase tracking-wider" href="#apoyar">Apoyar</a>
+        </div>
+        <div class="flex items-center gap-3">
+            <button class="hidden md:block bg-primary text-on-primary px-6 py-2.5 rounded-xl text-sm subtitle-font font-bold uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all">
+                Contactar
+            </button>
+            <!-- Mobile hamburger -->
+            <button id="menu-toggle" class="md:hidden text-tertiary p-2" aria-label="Abrir menú">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+    </nav>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden px-6 pb-0">
+        <div class="flex flex-col gap-4 py-4 border-t border-outline-variant/20">
+            <a class="text-primary font-semibold text-sm subtitle-font uppercase tracking-wider" href="#">Nosotras</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-semibold text-sm subtitle-font uppercase tracking-wider" href="#pilares">Pilares</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-semibold text-sm subtitle-font uppercase tracking-wider" href="#propuesta">Propuesta</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-semibold text-sm subtitle-font uppercase tracking-wider" href="#equipo">Equipo</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-semibold text-sm subtitle-font uppercase tracking-wider" href="#apoyar">Apoyar</a>
+            <button class="bg-primary text-on-primary px-6 py-2.5 rounded-xl text-sm subtitle-font font-bold uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all w-full mt-2">
+                Contactar
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="relative min-h-[85vh] flex items-center overflow-hidden bg-background">
+        <div class="absolute inset-0 z-0">
+            <img alt="Ambiente educativo Aldea Prisma" class="w-full h-full object-cover blur-[4px]" loading="eager" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANO6uzPXtUCfOitlgQLzhoFRq8F2smcVgkWla2c2FWAioUWR4_qRjikPNklQmVV1-CKSvVQJX3noQXi07hc2acyZp-gAuoBXYhhBblwB59NUYl8LAMhMEH61fZUdrYiG2RB6Gcz5JqFsXsWraKk715JnhDcaDQS_sPImsezIxe7fY9ESiSb6TEl5yT7S7HM1-vYpC2lNeyc1zC8wy95R1j49CQpLg7xULwJr2vMVw9GSwwNrCpbv7rmfd7dZngjoqfiyAw3dIuYBk">
+            <div class="absolute inset-0 bg-white/45 backdrop-brightness-110"></div>
+        </div>
+        <div class="relative z-10 px-6 md:px-margin-desktop max-w-container-max mx-auto w-full flex flex-col items-center justify-center py-20 text-center">
+            <div class="flex-shrink-0">
+                <img alt="Aldea Prisma Logo" class="h-48 md:h-96 w-auto object-contain mx-auto mb-0" loading="eager" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADA8-uAD0ijnXnGzZp077E4W9qg0gPV1qi3mv3tkDnoU70_ceSPUWRRMsXGOcJH0dd4EXevN_GjcdnkrXyq6hsyGYR8VDs3ZJnJ8y2zJWYd8Rv5Kqfccnt0zfLHZnmTOFPaJigsmqrU39jIvgKFBXlqCkD0teHKTnir4OEOmXa1y2vKvPHGY5og_hS8GRyRLxTe0wYn5IvFMhdN_UwNhfRreopnVCAPNCuzh_AGG0Wm7v9WESNd8XO_MjxGJyovkthfXl9h2JWeYk">
+            </div>
+            <div class="max-w-none w-full">
+                <h1 class="hero-headline drop-shadow-lg text-3xl md:text-4xl lg:text-5xl" style="line-height: 1.2;">
+                    <span style="color: rgb(135, 110, 157); text-shadow: rgba(255, 255, 255, 0.8) 2px 2px 8px;">Un ecosistema educativo para</span>
+                    <div>
+                        <span class="text-[#f5a623]" style="color: rgb(245, 166, 35); text-shadow: rgb(255, 255, 255) 0px 0px 15px, rgb(255, 255, 255) 0px 0px 10px, rgba(255, 255, 255, 0.8) 2px 2px 4px;">reconectar</span>
+                        <span style="color: rgb(135, 110, 157); text-shadow: rgba(255, 255, 255, 0.8) 2px 2px 8px;"> con el sentido de aprender</span>
+                    </div>
+                </h1>
+                <p class="font-medium tracking-normal drop-shadow-md mt-4 text-xl md:text-3xl lg:text-4xl" style="color: #ffffff; text-shadow: rgba(0, 0, 0, 0.8) 2px 2px 4px;">Fundación para aprender en comunidad y crecer con humanidad</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Vision -->
+    <section class="py-stack-lg bg-surface">
+        <div class="px-6 md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="max-w-4xl mx-auto text-center space-y-8">
+                <span class="text-secondary subtitle-font text-sm tracking-[0.2em] uppercase font-bold">Nuestra Visión</span>
+                <div class="space-y-6">
+                    <h2 class="script-font text-4xl md:text-5xl text-tertiary leading-tight">Creemos en una educación más humana,<br class="hidden md:inline"> consciente y significativa.</h2>
+                    <div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
+                    <p class="text-lg md:text-xl text-on-surface-variant italic font-light text-justify">
+                        Educar no es únicamente transmitir contenidos. Es reconocer que cada niño y niña tiene una forma única de sentir, aprender y habitar el mundo. En Aldea Prisma soñamos con una comunidad donde el aprendizaje conviva con el bienestar emocional, la sensibilidad, la creatividad y el sentido de pertenencia. Un espacio donde aprender también significa sentirse seguro, visto y acompañado.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The 4 Pillars -->
+    <section class="py-stack-lg bg-surface-container-low" id="pilares">
+        <div class="px-6 md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="script-font text-5xl md:text-6xl text-tertiary">Nuestros 4 Pilares</h2>
+                <p class="subtitle-font text-on-surface-variant mt-2 uppercase tracking-widest font-semibold text-xs">Fundamentos de nuestra propuesta integrativa</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Pillar 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-outline-variant/30 hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                        <span class="material-symbols-outlined text-3xl">school</span>
+                    </div>
+                    <h3 class="script-font text-3xl mb-2 text-secondary">Educación Significativa</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed text-justify">
+                        Aprendizaje basado en la experiencia y la curiosidad innata, conectando la teoría con la vida real y el propósito personal.
+                    </p>
+                </div>
+                <!-- Pillar 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-outline-variant/30 hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-secondary/10 text-secondary rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
+                        <span class="material-symbols-outlined text-3xl">favorite</span>
+                    </div>
+                    <h3 class="script-font text-3xl mb-2 text-secondary">Emocionalidad</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed text-justify">
+                        Acompañamiento consciente de los procesos emocionales, fomentando la empatía, la autorregulación y el autoconocimiento profundo.
+                    </p>
+                </div>
+                <!-- Pillar 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-outline-variant/30 hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-brand-green/20 text-brand-green rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-green group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-3xl">self_improvement</span>
+                    </div>
+                    <h3 class="script-font text-3xl mb-2 text-secondary">Espiritualidad</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed text-justify">
+                        Conexión con el sentido de la vida, el respeto sagrado por el entorno natural y la trascendencia de la esencia humana.
+                    </p>
+                </div>
+                <!-- Pillar 4 -->
+                <div class="bg-white p-8 rounded-2xl border border-outline-variant/30 hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-tertiary/10 text-tertiary rounded-xl flex items-center justify-center mb-6 group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors">
+                        <span class="material-symbols-outlined text-3xl">groups</span>
+                    </div>
+                    <h3 class="script-font text-3xl mb-2 text-secondary">Área Social y Familiar</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed text-justify">
+                        Construcción de una comunidad activa donde las familias son co-creadoras esenciales del proceso educativo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pedagogical Approach -->
+    <section class="py-stack-lg bg-white overflow-hidden" id="propuesta">
+        <div class="px-6 md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <div class="inline-block px-4 py-1 rounded-full bg-brand-green/10 text-brand-green subtitle-font text-xs tracking-widest uppercase font-bold">Enfoque Pedagógico</div>
+                    <h2 class="script-font text-5xl md:text-6xl text-tertiary">Una pedagogía inspirada en lo humano</h2>
+                    <div class="space-y-6 text-on-surface-variant text-lg leading-relaxed">
+                        <p class="text-justify">Nuestra propuesta se inspira en corrientes humanistas que comprenden la educación como un puente para el desarrollo integral y la transformación social.</p>
+                        <p class="text-justify">Integramos metodologías activas, educación emocional y neuroeducación, no como modelos rígidos, sino como herramientas vivas centradas en el vínculo.</p>
+                        <p class="text-justify">Buscamos equilibrar el aprendizaje académico, el bienestar emocional, la autonomía y el pensamiento crítico.</p>
+                    </div>
+                    <div class="bg-surface-container p-6 rounded-2xl border-l-4 border-primary">
+                        <h4 class="text-secondary mb-2 uppercase tracking-widest text-xs font-bold">¿A quién va dirigido?</h4>
+                        <p class="text-sm text-on-surface-variant font-medium">Niños, niñas y jóvenes, así como familias que buscan una educación más humana, consciente e integrativa que valore el bienestar y el respeto por los ritmos naturales.</p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="mb-8 overflow-hidden rounded-[2.5rem]">
+                        <img alt="Aprendizaje activo" class="w-full h-80 object-cover" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjWWvwdbxXDgsaKIxlLa6BL0VBr90sGSXdhKONWAKbt4u97F49NawizxLGYhhCnSjtLS2e-amJFS64bhFsRH2YaL_-Fzei5aOd72xsWsPWMwj7umC7AF6rYXepD7pKaF0sAIrrrPuvczbfWT60vyDd2pkHMfAslSNISCdiMW1FlI-tHMB8xV8tyin2vd4g2ROFwkfHejGmbI_lo9zDZa7IvZmjMxx7D-zCGCbXYRQbUqPJEzrxVmNZ4I4RopQQSpc2nfcki2tiXmw">
+                    </div>
+                    <div class="bg-secondary-container/30 p-8 md:p-12 rounded-[3rem] space-y-8">
+                        <h3 class="script-font text-4xl text-secondary">Modelo Operativo</h3>
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center">
+                                    <span class="material-symbols-outlined">diversity_3</span>
+                                </div>
+                                <div>
+                                    <h5 class="subtitle-font font-bold text-tertiary uppercase tracking-wide text-sm">Gestión Colaborativa</h5>
+                                    <p class="text-sm text-on-surface-variant text-justify">Grupos reducidos con acompañamiento cercano y participación familiar activa.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center">
+                                    <span class="material-symbols-outlined">menu_book</span>
+                                </div>
+                                <div>
+                                    <h5 class="subtitle-font font-bold text-tertiary uppercase tracking-wide text-sm">Base Académica</h5>
+                                    <p class="text-sm text-on-surface-variant text-justify">Cumplimiento curricular ministerial complementado con desarrollo emocional y conexión natural.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center">
+                                    <span class="material-symbols-outlined">trending_up</span>
+                                </div>
+                                <div>
+                                    <h5 class="subtitle-font font-bold text-tertiary uppercase tracking-wide text-sm">Implementación Progresiva</h5>
+                                    <p class="text-sm text-on-surface-variant text-justify">Etapas de consolidación de niveles, habilitación de infraestructura y fortalecimiento institucional.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alcance Section -->
+    <section class="py-stack-lg bg-surface-container-low" id="alcance">
+        <div class="px-6 md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="script-font text-5xl md:text-6xl text-tertiary">Alcance y Ubicación</h2>
+                <div class="w-16 h-1 bg-primary mx-auto rounded-full mt-4"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-outline-variant/20 hover:shadow-md transition-shadow flex flex-col items-center text-center">
+                    <div class="w-14 h-14 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-3xl">location_on</span>
+                    </div>
+                    <h4 class="subtitle-font font-bold text-tertiary uppercase tracking-wider text-sm mb-3">Ubicación</h4>
+                    <p class="text-on-surface-variant text-center">Región Metropolitana, Santiago de Chile.</p>
+                </div>
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-outline-variant/20 hover:shadow-md transition-shadow flex flex-col items-center text-center">
+                    <div class="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-3xl">child_care</span>
+                    </div>
+                    <h4 class="subtitle-font font-bold text-tertiary uppercase tracking-wider text-sm mb-3">Público Objetivo</h4>
+                    <p class="text-on-surface-variant">De manera inicial contempla niñeces de 1ro a 8vo básico.</p>
+                </div>
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-outline-variant/20 hover:shadow-md transition-shadow flex flex-col items-center text-center">
+                    <div class="w-14 h-14 bg-tertiary/10 text-tertiary rounded-2xl flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-3xl">verified_user</span>
+                    </div>
+                    <h4 class="subtitle-font font-bold text-tertiary uppercase tracking-wider text-sm mb-3">Modalidad</h4>
+                    <p class="text-on-surface-variant text-center">Se realiza con la modalidad de validación de estudios del Ministerio de Educación.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founding Team -->
+    <section class="py-stack-lg bg-surface" id="equipo">
+        <div class="px-6 md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="bg-secondary text-white rounded-[2rem] md:rounded-[3rem] p-8 md:p-12 lg:p-20 overflow-hidden relative">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full -mr-48 -mt-48 blur-3xl"></div>
+                <div class="relative z-10">
+                    <div class="max-w-3xl space-y-10">
+                        <h2 class="script-font text-5xl md:text-6xl text-primary">Equipo Fundador</h2>
+                        <blockquote class="text-xl md:text-2xl lg:text-3xl font-light italic leading-relaxed border-l-2 border-primary pl-8 text-justify" style="color: #ffffff;">
+                            Todo comenzó con una pregunta sencilla y humana. ¿Cómo nos gustaría que fuera el colegio de nuestros hijos? Comprendemos que la escuela no es solo un lugar de aprendizaje académico. Es el espacio donde niños y niñas pasan gran parte de sus días, construyendo vínculos, descubriendo quiénes son y desarrollando la manera en que se relacionarán con ellos mismos, con los demás y con el mundo.
+                            <br><br>
+                            La respuesta fue clara: Creemos que la escuela puede ser un espacio de profunda conexión, un lugar donde aprender, sentir y desarrollarse convivan en armonía.
+                        </blockquote>
+                        <div class="space-y-6">
+                            <p class="subtitle-font text-base md:text-lg lg:text-xl font-medium uppercase tracking-wide text-justify" style="color: #e9e3f1;">
+                                Somos 4 mujeres vinculadas a la educación, la cultura, el cuidado, y los derechos fundamentales, unidas por el propósito de crear un espacio donde nuestros hijos y la comunidad puedan florecer en libertad y respeto.
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <ul class="space-y-3 subtitle-font font-semibold uppercase tracking-widest text-xs" style="color: #ffffff;">
+                                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">check_circle</span> Educación y Pedagogía</li>
+                                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">check_circle</span> Desarrollo Humano</li>
+                                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">check_circle</span> Bienestar Emocional</li>
+                                </ul>
+                                <ul class="space-y-3 subtitle-font font-semibold uppercase tracking-widest text-xs" style="color: #ffffff;">
+                                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">check_circle</span> Sentido de Comunidad</li>
+                                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">check_circle</span> Respeto por las Niñeces</li>
+                                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">check_circle</span> Innovación Educativa</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="py-stack-lg bg-surface-container" id="apoyar">
+        <div class="px-6 md:px-margin-desktop max-w-container-max mx-auto text-center">
+            <div class="max-w-3xl mx-auto space-y-12">
+                <div class="space-y-4">
+                    <h2 class="script-font text-5xl md:text-6xl lg:text-7xl text-tertiary">¿Cómo puedes apoyar nuestro proyecto?</h2>
+                    <p class="subtitle-font text-lg md:text-xl text-on-surface-variant leading-relaxed font-normal">
+                        Aldea Prisma es un proyecto vivo que está creciendo gracias a la colaboración y aportes tanto de privados como de personas como tú y yo. Tenemos necesidades específicas para infraestructura y materiales pedagógicos de alta calidad.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 text-left">
+                    <div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-md transition-all border border-outline-variant/20">
+                        <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined">volunteer_activism</span>
+                        </div>
+                        <h4 class="script-font text-3xl mb-1 text-secondary">Donaciones Directas</h4>
+                        <p class="text-on-surface-variant mb-6 text-justify text-base">Aportes para el fondo de becas, habilitación de espacios y equipamiento de laboratorios de naturaleza.</p>
+                    </div>
+                    <div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-md transition-all border border-outline-variant/20">
+                        <div class="w-12 h-12 bg-tertiary/10 text-tertiary rounded-full flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined">handshake</span>
+                        </div>
+                        <h4 class="script-font text-3xl mb-1 text-secondary">Inversión con Propósito</h4>
+                        <p class="text-sm text-on-surface-variant mb-6 text-justify">Modelos de colaboración para socios fundadores y aliados estratégicos comprometidos con el cambio.</p>
+                    </div>
+                </div>
+                <div class="pt-8 space-y-6">
+                    <button class="bg-primary text-on-primary px-12 py-5 rounded-2xl script-font text-3xl hover:shadow-2xl transition-all hover:scale-[1.02] active:scale-95 shadow-lg shadow-primary/20 font-bold">
+                        Apoyar el proyecto
+                    </button>
+                    <p class="text-xs text-on-surface-variant italic uppercase tracking-widest font-semibold">
+                        "Cada aporte representa una posibilidad concreta de contribuir a la construcción de espacios educativos más humanos."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="py-stack-lg bg-surface" id="galeria">
+        <div class="px-6 md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="script-font text-5xl md:text-6xl text-tertiary">No educamos solo para rendir, educamos para habitar la vida.</h2>
+            </div>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                <div class="aspect-[3/4] overflow-hidden rounded-2xl md:rounded-3xl">
+                    <img alt="Vida en la aldea" class="w-full h-full object-cover" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbEou1FxJ6Usjj5n7Cvptax_WEtU3ciBQP1AZXXHmL3G3MIJp4DXo_js0aoyipIR_9fA6DZTqwfc1ffYO0pGJ7o8hAnlfyNL_-rXEXCaO_hHfbFNJt5ONXpCh9upb6vARNoG-Czdw_8c4S-kJdSyzUERITHTK-vau8VsTqzfq_w4BNvtfqjOPFnydSp7jdrqFfl-i_ZNza9c_yWDMq2tNVK3iREamqhMouCtPQttgkLMSufB_FVr80_peR2no53ivPj2iiZFdHYPE">
+                </div>
+                <div class="aspect-[3/4] overflow-hidden rounded-2xl md:rounded-3xl">
+                    <img alt="Vida en la aldea" class="w-full h-full object-cover" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZBe3If1YpeIma1Kx1rHrEYUYl0ZEqL5co-RU4iTAeOrNoeD77-YEXrz8Tf4_4wCP8wPTLGCRsjmZcKLDEv6bIGMCampI0iaQQW_PHaQrWJufh7BkV6QusKexuMC6lnc6Nsf2VfNGPPqtZBLNlKL9jnEz-RpFoIP6OAYFdJnDx3BaCDH7Uc-bOk5Kh8qBiXEKhaMOr_YxFr8fxRQkxi8-a4Fcpg2K5s9PROxISlpQqUAsJQ7XIxKykAJ9CGE8fxEHPqmmjhNOQY2w">
+                </div>
+                <div class="aspect-[3/4] overflow-hidden rounded-2xl md:rounded-3xl">
+                    <img alt="Vida en la aldea" class="w-full h-full object-cover" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs_oa6hdoaS5rLIpxMTumNNLGgiGIE4oWYWDMR9oppEQgpHsKo7HVgmrYaCFujAMqOq4OIGAu8QDBBbZVSuViZgDG1zPc661QGCzWxh4J_i4HcgDcEwXY1rzlNbZKi3wgEUdqpyLFLrypzPSDmx5Dh18b-2RqS1SsZGkUoceiQ9_mgCeEesHBxx4iaNkWmLsZQER5_eoxUw4zYFxRDCIzhkgGiIA11RvuWr_1aU8LF-EN-K66khx6Ovt3EqRTFyG5DKq79-JFY_tg">
+                </div>
+                <div class="aspect-[3/4] overflow-hidden rounded-2xl md:rounded-3xl">
+                    <img alt="Vida en la aldea" class="w-full h-full object-cover" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ2tc4sfoGFgEGb4kyx1K8_hoHA5QxDXVSt3rNBpkkEqMgpZWY790ZqkyFrRP17A5OU8gLa1rTq3Utb5IA0nzsNk06TM656eCB_eMKNLbZFhjn9NhdDcDjsKC6BdipFNV6cuc40vrkgn5Ub6ZoxBHaVdUfazKOhCgnhmvn9VEfohlVWa_pdjc_Lhn1fSKtQTkEn3Ggr_aR6L3B3Ur2ZxNSWED6HUzsdD4XuraGfG8F76f3CMTbMkTyNmyWHecvpZHpZgDLLcrm-_4">
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-surface-container-high py-stack-lg border-t border-outline-variant/30">
+    <div class="px-6 md:px-margin-desktop max-w-container-max mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+            <div class="space-y-6 max-w-sm">
+                <img alt="Aldea Prisma Logo" class="h-20 w-auto object-contain" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS9QgogS552iYgiCKPjaDG98jpWAoo0OC6-H8sXT4InCSsZMEUiZ8BKMYYrgS1dwuf9TKgOH10Lsc3mBUw5iIhiq9q0NTxmF1HJMiNhfmY8-Zm0wAPLO6iey-vjEhWL8gKpARdbfkbX4bVkJpm4XwllitIgIbcIm2ZQ_4NfJuBSe6zOSF9WGpTZ6TvItRYLMeRo_Ky_afX3U3K9CisxarKl_ov9joPuqPZx-vXfPTo3HdHCD9-1AAcKaFEatHVGr7HXx64Ny8DOH4">
+                <p class="text-on-surface-variant text-lg leading-relaxed font-normal">
+                    Cultivando una educación que honra la esencia de cada ser humano en armonía con la tierra. Santiago, Chile.
+                </p>
+                <div class="flex gap-4">
+                    <a class="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-secondary shadow-sm hover:bg-primary-container transition-colors" href="#" aria-label="Compartir">
+                        <span class="material-symbols-outlined">share</span>
+                    </a>
+                    <a class="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-secondary shadow-sm hover:bg-primary-container transition-colors" href="#" aria-label="Email">
+                        <span class="material-symbols-outlined">mail</span>
+                    </a>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-x-16 md:gap-x-24 gap-y-6">
+                <div class="space-y-4">
+                    <span class="subtitle-font text-secondary uppercase tracking-[0.2em] text-xs font-bold">Navegación</span>
+                    <ul class="space-y-3">
+                        <li><a class="text-on-surface-variant hover:text-primary transition-colors subtitle-font font-bold uppercase tracking-wider text-xs" href="#">Nosotras</a></li>
+                        <li><a class="text-on-surface-variant hover:text-primary transition-colors subtitle-font font-bold uppercase tracking-wider text-xs" href="#pilares">Pilares</a></li>
+                        <li><a class="text-on-surface-variant hover:text-primary transition-colors subtitle-font font-bold uppercase tracking-wider text-xs" href="#propuesta">Propuesta</a></li>
+                        <li><a class="text-on-surface-variant hover:text-primary transition-colors subtitle-font font-bold uppercase tracking-wider text-xs" href="#galeria">Galería</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <span class="subtitle-font text-secondary uppercase tracking-[0.2em] text-xs font-bold">Legal &amp; Contacto</span>
+                    <ul class="space-y-3">
+                        <li><a class="text-on-surface-variant hover:text-primary transition-colors subtitle-font font-bold uppercase tracking-wider text-xs" href="#">Privacidad</a></li>
+                        <li><a class="text-on-surface-variant hover:text-primary transition-colors subtitle-font font-bold uppercase tracking-wider text-xs" href="#">Contacto</a></li>
+                        <li><a class="text-primary font-bold transition-colors subtitle-font uppercase tracking-wider text-xs" href="#apoyar">Donaciones</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mt-16 pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-on-surface-variant text-xs font-bold uppercase tracking-widest subtitle-font">&copy; 2026 Aldea Prisma. Educación consciente y humana.</p>
+            <div class="flex gap-6">
+                <span class="text-on-surface-variant text-xs font-bold uppercase tracking-widest subtitle-font">Santiago, Chile</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        const menu = document.getElementById('mobile-menu');
+        const icon = this.querySelector('.material-symbols-outlined');
+        menu.classList.toggle('open');
+        icon.textContent = menu.classList.contains('open') ? 'close' : 'menu';
+    });
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.remove('open');
+            document.querySelector('#menu-toggle .material-symbols-outlined').textContent = 'menu';
+        });
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 20) {
+            header.classList.add('shadow-md', 'py-2');
+            header.classList.remove('shadow-sm', 'py-4');
+        } else {
+            header.classList.remove('shadow-md', 'py-2');
+            header.classList.add('shadow-sm', 'py-4');
+        }
+    });
+</script>
+
+</body>
+</html>
