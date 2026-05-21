@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Contacto | Aldea Prisma</title>
+    <meta name="description" content="Escríbenos para saber más sobre Aldea Prisma, nuestra propuesta educativa o cómo colaborar.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&family=Outfit:wght@400;500;600&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "primary": "#f5a623",
+                "on-primary": "#ffffff",
+                "primary-container": "#f5a623",
+                "on-primary-container": "#291800",
+                "secondary": "#7c6a96",
+                "on-secondary": "#ffffff",
+                "secondary-container": "#e9e3f1",
+                "on-secondary-container": "#230f45",
+                "tertiary": "#7189AF",
+                "on-tertiary": "#ffffff",
+                "tertiary-container": "#d4e3fd",
+                "on-tertiary-container": "#0d1c2f",
+                "brand-green": "#b5be9d",
+                "background": "#faf9f6",
+                "surface": "#faf9f6",
+                "on-surface": "#7189AF",
+                "on-surface-variant": "#7189AF",
+                "outline": "#d7c3ae",
+                "outline-variant": "#e3e2e0",
+                "surface-container-low": "#f4f3f1",
+                "surface-container": "#efeeeb",
+                "surface-container-high": "#e9e8e5",
+                "surface-container-highest": "#e3e2e0",
+                "inverse-surface": "#2f312f",
+                "inverse-on-surface": "#f2f1ee",
+                "error": "#ba1a1a",
+                "on-error": "#ffffff"
+              },
+              "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+              },
+              "spacing": {
+                "container-max": "1200px",
+                "margin-desktop": "64px",
+                "stack-md": "24px",
+                "unit": "8px",
+                "stack-lg": "48px",
+                "margin-mobile": "20px",
+                "gutter": "24px"
+              },
+              "fontFamily": {
+                "heading": ["Caveat", "cursive"],
+                "subtitle": ["League Spartan", "sans-serif"],
+                "body": ["Outfit", "Helvetica", "Arial", "sans-serif"],
+              },
+            },
+          },
+        }
+    </script>
+
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { color: #7189AF; font-family: 'Outfit', sans-serif; }
+        h1, h2, h3 { font-family: 'Caveat', cursive; color: #7189AF; }
+        h4, h5, .subtitle-font { font-family: 'League Spartan', sans-serif; color: #7189AF; }
+        .script-font { font-family: 'Caveat', cursive; }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col">
+
+    <!-- Simple header -->
+    <header class="bg-surface border-b border-outline-variant/20 py-4">
+        <div class="px-6 md:px-margin-desktop max-w-container-max mx-auto flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <img alt="Aldea Prisma Logo" class="w-auto object-contain h-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS9QgogS552iYgiCKPjaDG98jpWAoo0OC6-H8sXT4InCSsZMEUiZ8BKMYYrgS1dwuf9TKgOH10Lsc3mBUw5iIhiq9q0NTxmF1HJMiNhfmY8-Zm0wAPLO6iey-vjEhWL8gKpARdbfkbX4bVkJpm4XwllitIgIbcIm2ZQ_4NfJuBSe6zOSF9WGpTZ6TvItRYLMeRo_Ky_afX3U3K9CisxarKl_ov9joPuqPZx-vXfPTo3HdHCD9-1AAcKaFEatHVGr7HXx64Ny8DOH4">
+            </a>
+            <a href="index.html" class="text-on-surface-variant hover:text-primary transition-colors subtitle-font font-semibold text-sm uppercase tracking-wider flex items-center gap-2">
+                <span class="material-symbols-outlined text-xl">arrow_back</span>
+                Volver
+            </a>
+        </div>
+    </header>
+
+    <!-- Contact form -->
+    <main class="flex-1 flex items-center justify-center py-12 md:py-stack-lg">
+        <div class="px-6 md:px-margin-desktop w-full max-w-2xl">
+            <div class="text-center mb-10">
+                <h1 class="script-font text-5xl md:text-6xl text-tertiary mb-3">Contáctanos</h1>
+                <p class="text-on-surface-variant text-lg">Escríbenos y te responderemos a la brevedad.</p>
+            </div>
+
+            <form id="contact-form" class="bg-white rounded-3xl shadow-sm border border-outline-variant/20 p-8 md:p-12 space-y-6">
+                <!-- Name -->
+                <div>
+                    <label for="name" class="subtitle-font text-secondary uppercase tracking-widest text-xs font-bold block mb-2">Nombre</label>
+                    <input type="text" id="name" name="name" required placeholder="Tu nombre"
+                        class="w-full px-4 py-3 rounded-lg bg-surface-container-low border border-outline-variant/40 text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+                </div>
+
+                <!-- Email -->
+                <div>
+                    <label for="email" class="subtitle-font text-secondary uppercase tracking-widest text-xs font-bold block mb-2">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required placeholder="tu@correo.com"
+                        class="w-full px-4 py-3 rounded-lg bg-surface-container-low border border-outline-variant/40 text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+                </div>
+
+                <!-- Subject -->
+                <div>
+                    <label for="subject" class="subtitle-font text-secondary uppercase tracking-widest text-xs font-bold block mb-2">Asunto</label>
+                    <select id="subject" name="subject"
+                        class="w-full px-4 py-3 rounded-lg bg-surface-container-low border border-outline-variant/40 text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+                        <option value="info">Información general</option>
+                        <option value="apoyar">Quiero apoyar el proyecto</option>
+                        <option value="inscripcion">Inscripción</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <!-- Message -->
+                <div>
+                    <label for="message" class="subtitle-font text-secondary uppercase tracking-widest text-xs font-bold block mb-2">Mensaje</label>
+                    <textarea id="message" name="message" required rows="5" placeholder="Escríbenos tu consulta..."
+                        class="w-full px-4 py-3 rounded-lg bg-surface-container-low border border-outline-variant/40 text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-y"></textarea>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit"
+                    class="w-full bg-primary text-on-primary py-4 rounded-xl subtitle-font font-bold uppercase tracking-widest text-sm hover:brightness-110 active:scale-[0.98] transition-all shadow-lg shadow-primary/20">
+                    Enviar mensaje
+                </button>
+            </form>
+
+            <!-- Success message (hidden by default) -->
+            <div id="success-msg" class="hidden text-center mt-8 bg-brand-green/10 border border-brand-green/30 rounded-2xl p-8">
+                <span class="material-symbols-outlined text-brand-green text-5xl mb-3 block">check_circle</span>
+                <h3 class="script-font text-3xl text-secondary mb-2">¡Mensaje enviado!</h3>
+                <p class="text-on-surface-variant">Te responderemos a la brevedad. Gracias por tu interés en Aldea Prisma.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Simple footer -->
+    <footer class="bg-surface-container-high py-6 border-t border-outline-variant/30">
+        <div class="px-6 md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-on-surface-variant text-xs font-bold uppercase tracking-widest subtitle-font">&copy; 2026 Aldea Prisma. Educación consciente y humana.</p>
+            <span class="text-on-surface-variant text-xs font-bold uppercase tracking-widest subtitle-font">Santiago, Chile</span>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value.trim();
+
+            const subjectMap = {
+                'info': 'Información general',
+                'apoyar': 'Quiero apoyar el proyecto',
+                'inscripcion': 'Inscripción',
+                'otro': 'Consulta'
+            };
+
+            // Build mailto link
+            const mailSubject = encodeURIComponent(subjectMap[subject] + ' - Aldea Prisma');
+            const mailBody = encodeURIComponent(
+                'Nombre: ' + name + '\n' +
+                'Correo: ' + email + '\n' +
+                'Asunto: ' + subjectMap[subject] + '\n\n' +
+                message
+            );
+
+            // Open email client
+            window.location.href = 'mailto:contacto@aldeaprisma.cl?subject=' + mailSubject + '&body=' + mailBody;
+
+            // Show success
+            this.classList.add('hidden');
+            document.getElementById('success-msg').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
