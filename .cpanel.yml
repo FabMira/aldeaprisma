@@ -5,3 +5,5 @@ deployment:
     - /bin/cp -R index.html $DEPLOYPATH
     - /bin/cp -R contacto.html $DEPLOYPATH
     - /bin/cp -R .htaccess $DEPLOYPATH
+    - /bin/cp -R favicon-light.png $DEPLOYPATH
+    - /bin/cp -R favicon-dark.png $DEPLOYPATH
