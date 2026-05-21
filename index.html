@@ -545,14 +545,21 @@
     }
 
     // Smooth scroll + active state on click
+    const header = document.querySelector('header');
+    let isScrolling = false;
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const href = this.getAttribute('href');
             const target = document.querySelector(href);
             if (target) {
+                isScrolling = true;
+                header.classList.add('nav-hidden');
                 target.scrollIntoView({ behavior: 'smooth' });
                 setActiveLink(href);
+                // Re-enable after scroll finishes
+                clearTimeout(isScrolling._timer);
+                isScrolling._timer = setTimeout(() => { isScrolling = false; }, 800);
             }
         });
     });
@@ -577,16 +584,15 @@
 
     // Header hide on scroll down, show on scroll up
     let lastScrollY = 0;
-    const header = document.querySelector('header');
 
     window.addEventListener('scroll', () => {
+        if (isScrolling) return;
+
         const currentScrollY = window.scrollY;
 
         if (currentScrollY > 80 && currentScrollY > lastScrollY) {
-            // Scrolling down — hide
             header.classList.add('nav-hidden');
         } else {
-            // Scrolling up — show
             header.classList.remove('nav-hidden');
         }
 
