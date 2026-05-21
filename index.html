@@ -87,6 +87,13 @@
         .glass-nav {
             background: rgba(250, 249, 246, 0.85);
             backdrop-filter: blur(12px);
+            transition: transform 0.3s ease;
+        }
+        .glass-nav.nav-hidden {
+            transform: translateY(-100%);
+        }
+        section[id] {
+            scroll-margin-top: 90px;
         }
         body { color: #7189AF; }
         h1, h2, h3 { font-family: 'Caveat', cursive; letter-spacing: 0; text-transform: none; color: #7189AF; }
@@ -572,16 +579,31 @@
 
     sections.forEach(section => observer.observe(section));
 
-    // Header scroll effect
+    // Header hide on scroll down, show on scroll up
+    let lastScrollY = 0;
+    const header = document.querySelector('header');
+
     window.addEventListener('scroll', () => {
-        const header = document.querySelector('header');
-        if (window.scrollY > 20) {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > 80 && currentScrollY > lastScrollY) {
+            // Scrolling down — hide
+            header.classList.add('nav-hidden');
+        } else {
+            // Scrolling up — show
+            header.classList.remove('nav-hidden');
+        }
+
+        // Shadow effect
+        if (currentScrollY > 20) {
             header.classList.add('shadow-md', 'py-2');
             header.classList.remove('shadow-sm', 'py-4');
         } else {
             header.classList.remove('shadow-md', 'py-2');
             header.classList.add('shadow-sm', 'py-4');
         }
+
+        lastScrollY = currentScrollY;
     });
 </script>
 
