@@ -557,9 +557,12 @@
                 header.classList.add('nav-hidden');
                 target.scrollIntoView({ behavior: 'smooth' });
                 setActiveLink(href);
-                // Re-enable after scroll finishes
+                // Re-enable after scroll finishes, sync lastScrollY so nav stays hidden
                 clearTimeout(isScrolling._timer);
-                isScrolling._timer = setTimeout(() => { isScrolling = false; }, 800);
+                isScrolling._timer = setTimeout(() => {
+                    lastScrollY = window.scrollY;
+                    isScrolling = false;
+                }, 800);
             }
         });
     });
